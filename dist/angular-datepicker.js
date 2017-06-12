@@ -407,7 +407,10 @@
 
               theCalendar.classList.add('_720kb-datepicker-open');
               if (dateFormat) {
-                date = localDateTimestamp(thisInput[0].value.toString(), dateFormat);
+                if($scope.dateSet &&  $scope.dateSetHidden && !thisInput[0].value.toString())
+                  date = localDateTimestamp($scope.dateSet, dateFormat);
+                else
+                  date = localDateTimestamp(thisInput[0].value.toString(), dateFormat);
               } else {
                 date = new Date(thisInput[0].value.toString());
               }
