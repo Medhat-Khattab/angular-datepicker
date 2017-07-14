@@ -470,12 +470,12 @@
           })
           , unregisterDateMinLimitWatcher = $scope.$watch('dateMinLimit', function dateMinLimitWatcher(newValue) {
             if (newValue) {
-              resetToMinDate();
+              // resetToMinDate();
             }
           })
           , unregisterDateMaxLimitWatcher = $scope.$watch('dateMaxLimit', function dateMaxLimitWatcher(newValue) {
             if (newValue) {
-              resetToMaxDate();
+              // resetToMaxDate();
             }
           })
           , unregisterDateFormatWatcher = $scope.$watch('dateFormat', function dateFormatWatcher(newValue) {
